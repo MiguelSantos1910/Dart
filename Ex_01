@@ -1,0 +1,13 @@
+import 'dart:io';
+void cadastro(String nome_usuario, String curso, int idade){
+    print("Bem vindo $nome_usuario, $idade anos, agora você faz parte do curso de $curso!");
+}
+void main(){
+    print("Qual seu nome: ");
+    String nome = stdin.readLineSync()!;
+    print("Qual seu curso: ");
+    String curso = stdin.readLineSync()!;
+    print("Qual sua idade: ");
+    int idade = int.parse(stdin.readLineSync()!);
+    cadastro(nome, curso, idade);
+}
