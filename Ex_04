@@ -1,0 +1,26 @@
+import 'dart:io';
+void dolar(double valor){
+    double total = valor * 6.56;
+    print("Conversão de Real Brasileiro para USD: $total");
+}
+void franco(double valor){
+    double total = valor * 7.00;
+    print("Conversão de Real Brasileiro para CHF: $total");
+}
+void main(){
+    print("Selecione a moeda a ser convertido: 1 - Franco Suíço | 2 - Dólar");
+    String op = stdin.readLineSync()!;
+    print("Digite a quantia a ser convertida: ");
+    double dinheiro = double.parse(stdin.readLineSync()!);
+    switch (op){
+        case == "1":
+        franco(dinheiro);
+        break;
+        case == '2':
+        dolar(dinheiro);
+        break;
+        default:
+        print("Operação inválida!");
+        break;
+    }
+}
