@@ -1,0 +1,14 @@
+import 'dart:io';
+import 'dart:math';
+void main(){
+    print("Insira o valor 1: ");
+    double v1 = double.parse(stdin.readLineSync()!);
+    print("Insira o valor 2: ");
+    double v2 = double.parse(stdin.readLineSync()!);
+    print("Insira o valor 3: ");
+    double v3 = double.parse(stdin.readLineSync()!);
+    double maximo = max(v1, max(v2, v3));
+    double minimo = min(v1, min(v2, v3));
+    print("O valor máximo é de: $maximo");
+    print("O valor mínimo é de: $minimo");
+}
