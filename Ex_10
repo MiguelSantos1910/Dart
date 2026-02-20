@@ -1,0 +1,11 @@
+import 'dart:io';
+import 'package:math_expressions/math_expressions.dart';
+void main(){
+    print("Selecione os 4 números a serem calculados: ");
+    String conta = stdin.readLineSync()!;
+    Parser x = Parser();
+    Expression y = x.parse(conta);
+    ContextModel z = ContextModel();
+    double total = y.evaluate(EvaluationType.REAL, z);
+    print("Resultado da operação = $total");
+} 
