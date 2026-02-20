@@ -1,0 +1,21 @@
+import 'dart:io';
+void calcularMedia(double nota_1, double nota_2){
+    double total = (nota_1 + nota_2) / 2;
+    print("Média Final: $total");
+    if(total >= 7){
+        print("Aluno aprovado!");
+    }
+    if(total >= 4 && total <7){
+        print("Aluno de Recuperação");
+    }
+    if(total <= 3){
+        print("Aluno reprovado!");
+    }
+}
+void main(){
+    print("Digite a nota 1: ");
+    double n1 = double.parse(stdin.readLineSync()!);
+    print("Digite a nota 2: ");
+    double n2 = double.parse(stdin.readLineSync()!);
+    calcularMedia(n1, n2);
+}
