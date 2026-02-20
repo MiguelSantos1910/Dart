@@ -1,0 +1,12 @@
+import 'dart:io';
+void main(){
+    print("Digite sua idade: ");
+    int idade_1 = int.parse(stdin.readLineSync()!);
+    print("Digite a idade novamente: ");
+    int idade_2 = int.parse(stdin.readLineSync()!);
+    if(idade_1 > idade_2){
+        print("A idade 1: $idade_1 é maior que a segunda idade 2: $idade_2");
+    }else{
+        print("A idade 2: $idade_2 é maior que a segunda idade 1: $idade_1");
+    }
+}
