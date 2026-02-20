@@ -1,0 +1,58 @@
+import "dart:io";
+import "dart:math";
+void main(){
+    print("Insira o tipo de combustível: E - Etanol | D - Diesel | G - Gasolina");
+    String op = stdin.readLineSync()!;
+    switch (op){
+        case "E":
+        print("Selecionado ETANOL");
+        print("Digite a quantidade de combustível desejado: ");
+        double litros = double.parse(stdin.readLineSync()!);
+        double total = litros * 1.70;
+        print("Total a pagar sem desconto: $total");
+        if(litros >= 15){
+            double desconto = 1.70 * 0.04 * litros;
+            double totalDesconto = (litros * 1.70) - desconto;
+            print("Total com desconto: $totalDesconto");
+        }
+        else{
+            double desconto = 1.70 * 0.03 * litros;
+            double totalDesconto = (litros * 1.70) - desconto;
+            print("Total com desconto: $totalDesconto");
+        }
+        break;
+        case "D":
+        print("Selecionado DIESEL");
+        print("Digite a quantidade de combustível desejado: ");
+        double litros = double.parse(stdin.readLineSync()!);
+        double total = litros * 2.00;
+        print("Total a pagar sem desconto: $total");
+        if(litros >= 15){
+            double desconto = 2.00 * 0.05 * litros;
+            double totalDesconto = (litros * 2.00) - desconto;
+            print("Total com desconto: $totalDesconto");
+        }
+        else{
+            double desconto = 2.00 * 0.03 * litros;
+            double totalDesconto = (litros * 2.00) - desconto;
+            print("Total com desconto: $totalDesconto");
+        }
+        break;
+         case "G":
+        print("Selecionado GASOLINA");
+        print("Digite a quantidade de combustível desejado: ");
+        double litros = double.parse(stdin.readLineSync()!);
+        double total = litros * 4.50;
+        print("Total a pagar sem desconto: $total");
+        if(litros >= 20){
+            double desconto = 4.50 * 0.03 * litros;
+            double totalDesconto = (litros * 4.50) - desconto;
+            print("Total com desconto: $totalDesconto");
+        }
+        else{
+            double total = litros * 4.50;
+            print("Total a pagar: $total");
+        }
+        break;
+    }
+}
