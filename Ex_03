@@ -1,0 +1,17 @@
+import 'dart:io';
+void salario(double salario_ganho){
+    double total_imposto = salario_ganho * 0.1;
+    double total = salario_ganho - total_imposto;
+    double bonificacao = salario_ganho * 0.2;
+    double total_bonificacao = salario_ganho + bonificacao;
+    double salario_final = total_bonificacao - total + salario_ganho;
+    print("Impostos pelo salario: $total_imposto");
+    print("Bonificação: $bonificacao");
+    print("Total ganho no mês com impostos descontados são $total, além de sua bonificação de $total_bonificacao");
+    print("Salário final: $salario_final");
+}
+void main(){
+    print("Qual seu salário mensal: ");
+    double ganho = double.parse(stdin.readLineSync()!);
+    salario(ganho);
+}
