@@ -1,0 +1,40 @@
+import 'dart:io';
+void main(){
+    print("Qual a sua instalação: 1 - Residencial | 2 - Comercial | 3 - Industrial");
+    String op = stdin.readLineSync()!;
+    switch(op){
+        case "1":
+        print("Qual o consumo de energia em KWh");
+        double valor = double.parse(stdin.readLineSync()!);
+        if(valor <= 500){
+            double total = valor * 0.70;
+            print("Valor total a ser pago: $total");
+        }else{
+            double total = valor * 0.50;
+            print("Valor total a ser pago: $total");
+        }
+        break;
+        case "2":
+        print("Qual o consumo de energia em KWh");
+        double valor = double.parse(stdin.readLineSync()!);
+        if(valor <= 1000){
+            double total = valor * 0.65;
+            print("Valor total a ser pago: $total");
+        }else{
+            double total = valor * 0.60;
+            print("Valor total a ser pago: $total");
+        }
+        break;
+        case "3":
+        print("Qual o consumo de energia em KWh");
+        double valor = double.parse(stdin.readLineSync()!);
+        if(valor <= 5000){
+            double total = valor * 0.55;
+            print("Valor total a ser pago: $total");
+        }else{
+            double total = valor * 0.50;
+            print("Valor total a ser pago: $total");
+        }
+        break;
+    }
+}
