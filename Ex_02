@@ -1,0 +1,12 @@
+import 'dart:io';
+void areaTriangulo(double base, double altura){
+    double area = (base * altura) / 2;
+    print("A área total do triângulo é de: $area");
+}
+void main(){
+    print("Qual a base do triângulo: ");
+    double base_x = double.parse(stdin.readLineSync()!);
+    print("Qual a altura do triângulo: ");
+    double altura_y = double.parse(stdin.readLineSync()!);
+    areaTriangulo(base_x, altura_y);
+}
